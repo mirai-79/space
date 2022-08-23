@@ -1,0 +1,37 @@
+@use "sass:map";
+
+// global > breakpoint
+// ------------------------------
+$breakpoints: (
+    "sm": 500px,
+    "sp": 767.98px,
+    "md": 768px,
+    "lg": 1080px,
+    "xl": 1200px,
+);
+
+@mixin mq($breakpoint: md) {
+    @media screen and (min-width: #{map-get($breakpoints, $breakpoint)}), print {
+        @content;
+    }
+    
+}
+
+@mixin sp($breakpoint: sp) {
+    @media screen and (max-width: #{map-get($breakpoints, $breakpoint)}) {
+        @content;
+    }
+    
+}
+
+$hoverpoints: (
+    "hover": hover,
+    "none": none,
+);
+
+@mixin ho($hoverpoint: hover) {
+    @media (hover: #{map-get($hoverpoints, $hoverpoint)}) {
+        @content
+    }
+}
+

@@ -1,0 +1,23 @@
+// 
+// global > mixin
+// ------------------------------
+@mixin hover() {
+  .link {
+    background: rgba(0, 0, 0, 1);
+  }
+  
+  @media (hover: hover) {
+    .link {
+      transform: scale(1.1);
+    }
+    .link:hover {
+      background: rgba(0, 0, 0, 0.7);
+      transform: scale(1);
+    }
+  }
+}
+
+@mixin font-size($size) {
+  font-size: $size + px;
+  font-size: ($size / 16) * 1rem;
+}

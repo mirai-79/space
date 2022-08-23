@@ -1,0 +1,14 @@
+{
+  "name": "d",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch C:/Users/酒巻剛/Downloads/WCBカスタマイズ_1-公開用"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.52.1"
+  }
+}

@@ -1,0 +1,823 @@
+/*!
+global > color
+------------------------------
+*/
+:root {
+  --color-bg-primary: #020624;
+  --color-bg-primary-dark: #030416;
+  --color-bg-sub: #152063;
+  --color-font-base: #fffdde;
+  --color-base: #fffdde;
+  --color-base-dark: #010414;
+}
+
+/*!
+global > content-width
+------------------------------
+*/
+:root {
+  --width-content-ss: 760px;
+  --width-content-s: 920px;
+  --width-content: 1080px;
+}
+
+/*!
+global > font
+------------------------------
+*/
+:root {
+  --font-family-base: "Noto Sans JP", serif;
+  --font-family-pop: "Mochiy Pop P One", sans-serif;
+}
+
+/*!
+foundation > reset
+------------------------------
+*/
+html {
+  color: #000;
+  background: #fff;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+q:before,
+q:after {
+  content: "";
+}
+
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+input,
+textarea,
+select,
+button {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  *font-size: 100%;
+  border-radius: 0;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: inherit;
+}
+
+input,
+textarea,
+select {
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+  display: block;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+}
+
+legend {
+  color: #000;
+}
+
+main {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+svg {
+  display: block;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*!
+foundation > base
+------------------------------
+*/
+body {
+  line-height: 1.8;
+  font-size: 16px;
+  color: var(--color-font-base);
+  font-family: var(--font-family-base);
+}
+@media screen and (min-width: 768px), print {
+  body {
+    font-size: 18px;
+  }
+}
+
+/*!
+utility > utility
+------------------------------
+*/
+.u-visually-hidden {
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  padding: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  margin: -1px !important;
+}
+
+/*!
+component > title
+------------------------------
+*/
+.c-title__level2 {
+  letter-spacing: 0.08em;
+  padding-left: 0.08em;
+  text-align: center;
+}
+
+.c-title__level2 {
+  font-size: 24px;
+  font-family: var(--font-family-pop);
+}
+@media screen and (min-width: 768px), print {
+  .c-title__level2 {
+    font-size: 36px;
+  }
+}
+
+.c-title__level3 {
+  font-size: 18px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-font-base);
+  text-align: center;
+}
+@media screen and (min-width: 768px), print {
+  .c-title__level3 {
+    font-size: 24px;
+    padding-bottom: 16px;
+  }
+}
+
+/*!
+layout > container
+------------------------------
+*/
+.l-container, .l-container-s, .l-container-ss {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.l-container-ss {
+  max-width: var(--width-content-ss);
+}
+
+.l-container-s {
+  max-width: var(--width-content-s);
+}
+
+.l-container {
+  max-width: var(--width-content);
+}
+
+/*!
+layout > section
+------------------------------
+*/
+.l-section {
+  padding: 80px 0;
+}
+@media screen and (min-width: 768px), print {
+  .l-section {
+    padding: 104px 0;
+  }
+}
+
+/*!
+layout > section-body
+------------------------------
+*/
+.l-section-body {
+  margin-top: 48px;
+}
+@media screen and (min-width: 768px), print {
+  .l-section-body {
+    margin-top: 56px;
+  }
+}
+
+/*!
+layout > header
+------------------------------
+*/
+.header {
+  background-color: rgba(21, 32, 99, 0.5);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 70px;
+  opacity: 0;
+  transition: 0.5s;
+}
+@media screen and (min-width: 768px), print {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+  }
+}
+.header.appear {
+  opacity: 1;
+}
+
+.header__title {
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  text-align: center;
+  font-family: var(--font-family-pop);
+  padding-left: 1em;
+}
+@media screen and (min-width: 768px), print {
+  .header__title {
+    font-size: 24px;
+  }
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav__item a {
+  line-height: 1.5;
+  position: relative;
+}
+@media screen and (min-width: 768px), print {
+  .nav__item a {
+    font-size: 20px;
+    margin: 0 2em;
+  }
+}
+
+@media (hover: hover) {
+  .nav__item a {
+    cursor: pointer;
+  }
+  .nav__item a::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    content: "\f005";
+    position: absolute;
+    font-size: 0.6em;
+    top: 2.5em;
+    transition: 0.5s;
+  }
+}
+@media screen and (hover: hover) and (max-width: 767.98px) {
+  .nav__item a::before {
+    top: 2.2em;
+  }
+}
+@media (hover: hover) {
+  .nav__item a::before {
+    transition: 0.5s;
+  }
+}
+@media (hover: hover) {
+  .nav__item a:hover::before {
+    transform: translateX(200%);
+  }
+}
+/*!
+layout > footer
+------------------------------
+*/
+.footer {
+  background-color: rgb(255, 252, 209);
+}
+.footer small {
+  display: block;
+  color: var(--color-base-dark);
+  text-align: center;
+  padding: 16px 0;
+}
+
+/*!
+page > top > kv
+------------------------------
+*/
+.top-kv {
+  background-image: url(https://web.haresan.com/starscape-photography/img/kv-sp.jpg);
+  height: 100vh;
+  background-position: 45%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (min-width: 500px), print {
+  .top-kv {
+    background-image: url(https://web.haresan.com/starscape-photography/img/kv.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: 25%;
+  }
+}
+@media screen and (min-width: 768px), print {
+  .top-kv {
+    background-position: 35%;
+  }
+}
+
+.top-kv__inner {
+  padding-top: 85px;
+}
+
+.top-kv__copy {
+  margin-top: 15vh;
+  padding: 1em;
+  border-radius: 40px;
+  width: 80%;
+  text-align: center;
+}
+@media screen and (min-width: 500px), print {
+  .top-kv__copy {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 768px), print {
+  .top-kv__copy {
+    width: 50%;
+  }
+}
+
+.top-kv__copy-text:first-child {
+  font-size: 24px;
+  display: block;
+  font-family: var(--font-family-pop);
+}
+@media screen and (min-width: 768px), print {
+  .top-kv__copy-text:first-child {
+    font-size: min(4.375vw, 48px);
+  }
+}
+
+.top-kv__copy-text:nth-child(2) {
+  margin: 0 auto;
+  padding-top: 16px;
+  display: block;
+  width: 80%;
+  text-align: left;
+}
+
+/*!
+page > top > setup
+------------------------------
+*/
+.setup {
+  background-color: var(--color-bg-primary);
+}
+
+.setup__item {
+  background-color: var(--color-bg-primary-dark);
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  overflow-x: hidden;
+}
+@media screen and (min-width: 768px), print {
+  .setup__item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  .setup__item:nth-child(odd) {
+    flex-direction: row;
+  }
+}
+
+.setup__body {
+  position: relative;
+}
+
+.setup__star01::before {
+  content: "";
+  display: inline-block;
+  background-image: url(https://web.haresan.com/starscape-photography/img/star1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  right: -30%;
+  top: -30%;
+}
+.setup__star01.appear::before {
+  animation: starmove 0.5s ease forwards;
+}
+
+.setup__star02::before {
+  content: "";
+  display: inline-block;
+  background-image: url(https://web.haresan.com/starscape-photography/img/star2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  left: -30%;
+  top: -30%;
+}
+.setup__star02.appear::before {
+  animation: left_starmove 0.5s forwards;
+}
+
+.setup__star03::before {
+  content: "";
+  display: inline-block;
+  background-image: url(https://web.haresan.com/starscape-photography/img/star3.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  right: -30%;
+  top: -20%;
+  z-index: 100;
+}
+.setup__star03.appear::before {
+  animation: starmove 0.5s ease forwards;
+}
+
+@keyframes starmove {
+  0% {
+    right: -30%;
+    top: -20%;
+  }
+  100% {
+    right: -3%;
+    top: 0;
+  }
+}
+@keyframes left_starmove {
+  0% {
+    left: -30%;
+    top: -20%;
+  }
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+.setup__bg-image {
+  aspect-ratio: 3/2;
+  background-image: url(https://web.haresan.com/starscape-photography/img/slide-sp03.jpg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (min-width: 768px), print {
+  .setup__bg-image {
+    background-image: url(https://web.haresan.com/starscape-photography/img/slide04.jpg);
+  }
+}
+.setup__bg-image--2 {
+  background-image: url(https://web.haresan.com/starscape-photography/img/slide-sp04.jpg);
+  background-position: bottom;
+}
+@media screen and (min-width: 768px), print {
+  .setup__bg-image--2 {
+    background-image: url(https://web.haresan.com/starscape-photography/img/slide04.jpg);
+  }
+}
+.setup__bg-image--3 {
+  background-image: url(https://web.haresan.com/starscape-photography/img/slide-sp02.jpg);
+  background-position: bottom right;
+}
+@media screen and (min-width: 768px), print {
+  .setup__bg-image--3 {
+    background-image: url(https://web.haresan.com/starscape-photography/img/slide02.jpg);
+  }
+}
+@media screen and (min-width: 768px), print {
+  .setup__bg-image {
+    width: 50%;
+  }
+}
+
+.setup__inner {
+  padding: 20px;
+}
+@media screen and (min-width: 768px), print {
+  .setup__inner {
+    padding: 15px;
+  }
+}
+
+.setup__img {
+  flex-shrink: 0;
+}
+@media screen and (min-width: 768px), print {
+  .setup__img {
+    width: 50%;
+  }
+  .setup__img img {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+  }
+}
+.setup__img--triming {
+  position: relative;
+}
+.setup__img--triming::before {
+  content: "";
+  display: block;
+  padding-top: 66.4609%;
+}
+.setup__img--triming img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.setup__text {
+  margin-top: 16px;
+}
+.setup__text span {
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px), print {
+  .setup__text {
+    margin-top: 24px;
+  }
+}
+
+/*!
+page > top > pictures
+------------------------------
+*/
+.pictures {
+  background-color: var(--color-bg-primary-dark);
+}
+
+.pictures__list {
+  position: relative;
+  aspect-ratio: 3/2;
+}
+
+.pictures__item img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pictures__nav {
+  margin-top: 16px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.pictures__nav div {
+  width: 1em;
+  height: 1em;
+  background-color: var(--color-bg-sub);
+  border-radius: 50%;
+  border: none;
+  transition: 0.5s;
+}
+.pictures__nav div.current {
+  background-color: var(--color-base);
+}
+.pictures__nav div:not(:first-child) {
+  margin-left: 1em;
+}
+
+.pictures__item img {
+  opacity: 0;
+  transition: 1s;
+}
+
+.pictures__item img.current {
+  opacity: 1;
+}
+
+/*!
+page > top > condition
+------------------------------
+*/
+.condition {
+  background-color: var(--color-bg-primary);
+}
+
+@media screen and (min-width: 768px), print {
+  .condition__table {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.condition__table-row {
+  display: flex;
+  padding: 16px 0;
+  gap: 16px;
+  border-bottom: 1px solid var(--color-base);
+}
+.condition__table-row:nth-child(1) {
+  padding-top: 0;
+}
+@media screen and (min-width: 768px), print {
+  .condition__table-row {
+    padding: 24px 0;
+  }
+}
+.condition__table-row th {
+  width: 30%;
+  text-align: left;
+}
+.condition__table-row td {
+  width: 70%;
+}
+
+/*!
+page > top > map
+------------------------------
+*/
+.location {
+  background-color: var(--color-bg-primary-dark);
+  padding-top: 88px;
+}
+@media screen and (min-width: 768px), print {
+  .location {
+    padding: 104px 0;
+  }
+}
+
+.location span {
+  display: block;
+}
+
+.location__info {
+  text-align: center;
+  font-size: 20px;
+  font-family: var(--font-family-pop);
+}
+@media screen and (min-width: 768px), print {
+  .location__info {
+    font-size: 36px;
+  }
+}
+
+.location__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+@media screen and (min-width: 768px), print {
+  .location__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 32px;
+  }
+}
+
+.location__address {
+  text-align: center;
+}
+@media screen and (min-width: 768px), print {
+  .location__address {
+    width: 40%;
+    text-align: left;
+  }
+}
+.location__address span:nth-child(2) {
+  margin-top: 8px;
+}
+
+.location__map {
+  aspect-ratio: 3/2;
+}
+@media screen and (max-width: 767.98px) {
+  .location__map {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+}
+.location__map iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+@media screen and (min-width: 768px), print {
+  .location__map {
+    width: 60%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

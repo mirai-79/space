@@ -1,0 +1,131 @@
+@use "../global" as g;
+
+/*!
+component > title
+------------------------------
+*/
+
+%title {
+  letter-spacing: 0.08em;
+  padding-left: 0.08em;
+  text-align: center;
+}
+
+.c-title__level2 {
+  @extend %title;
+  font-size: 24px;
+  font-family: var(--font-family-pop);
+  @include g.mq() {
+      font-size: 36px;
+  }
+}
+
+.c-title__level3 {
+  font-size: 18px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-font-base);
+  text-align: center;
+  @include g.mq() {
+      font-size: 24px;
+      padding-bottom: 16px;
+  }
+}
+
+
+
+
+// %title {
+//     color: var(--color-font-black);
+//     line-height: 1.6;
+//     letter-spacing: 0.08em;
+// }
+
+// %title-english {
+//     text-transform: uppercase;
+//     color: var(--color-font-black);
+//     letter-spacing: 0.4em;
+//     line-height: 1.6;
+//     font-family: var(--font-family-english);
+//     font-weight: 700;
+//     display: block;
+// }
+
+// /*! level1 */
+// .c-title-level1 {
+//     font-size: 14px;
+//     @extend %title;
+
+//     @include g.mq() {
+//         font-size: 18px;
+//     }
+
+//     &--center {
+//         padding-left: 0.08em;
+//         text-align: center;
+//     }
+// }
+
+// .c-title-level1-english {
+//     font-size: 24px;
+//     @extend %title-english;
+
+//     @include g.mq() {
+//         font-size: 36px;
+//     }
+
+//     &--center {
+//         text-align: center;
+//         padding-left: 0.4em;
+//     }
+// }
+
+// /*! level2 */
+// .c-title-level2 {
+//     font-size: 14px;
+//     @extend %title;
+//     margin-top: 8px;
+
+//     @include g.mq() {
+//         font-size: 18px;
+//     }
+
+//     &--center {
+//         text-align: center;
+//         padding-left: 0.08em;
+//     }
+// }
+
+// .c-title-level2-english {
+//     font-size: 20px;
+//     @extend %title-english;
+
+//     @include g.mq() {
+//         font-size: 32px;
+//     }
+
+//     span {
+//         display: inline-block;
+//     }
+
+//     &--center {
+//         text-align: center;
+//         padding-left: 0.4em;
+//     }
+// }
+
+// /*! level3 */
+// .c-title-level3 {
+//     font-size: 18px;
+//     @extend %title;
+//     font-weight: 500;
+
+//     @include g.mq() {
+//         font-size: 20px;
+//     }
+
+//     &--center {
+//         padding-left: 0.08em;
+//         text-align: center;
+//     }
+// }
+

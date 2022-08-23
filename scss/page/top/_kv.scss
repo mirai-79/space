@@ -1,0 +1,54 @@
+@use "../../global" as g;
+
+/*!
+page > top > kv
+------------------------------
+*/
+.top-kv {
+  background-image: url(https://web.haresan.com/starscape-photography/img/kv-sp.jpg);
+  height: 100vh;
+  background-position: 45%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include g.mq(sm) {
+    background-image: url(https://web.haresan.com/starscape-photography/img/kv.jpg);
+    height: 100vh;
+      background-size: cover;
+      background-position: 25%;
+  }
+  @include g.mq() {
+      background-position: 35%;
+  }
+}
+.top-kv__inner {
+  padding-top: 85px;
+}
+.top-kv__copy {
+  margin-top: 15vh;
+  // background-color: var(--color-bg-primary);
+  padding: 1em;
+  border-radius: 40px;
+  width: 80%;
+  text-align: center;
+  @include g.mq(sm) {
+      width: 60%;
+  }
+  @include g.mq() {
+      width: 50%;
+  }
+}
+.top-kv__copy-text:first-child {
+  font-size: 24px;
+  display: block;
+  font-family: var(--font-family-pop);
+  @include g.mq() {
+      font-size: min(4.375vw, 48px);
+  }
+}
+.top-kv__copy-text:nth-child(2) {
+  margin: 0 auto;
+  padding-top: 16px;
+  display: block;
+  width: 80%;
+  text-align: left;
+}

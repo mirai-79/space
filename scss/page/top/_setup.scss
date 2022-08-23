@@ -1,0 +1,199 @@
+@use "../../global" as g;
+
+/*!
+page > top > setup
+------------------------------
+*/
+.setup {
+  background-color: var(--color-bg-primary);
+}
+.setup__item {
+  background-color: var(--color-bg-primary-dark);
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  overflow-x: hidden;
+  
+  @include g.mq() { 
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    &:nth-child(odd) {
+      flex-direction: row;
+    }
+    
+  }
+  
+}
+
+.setup__body {
+  position: relative;
+}
+.setup__star01 {
+  &::before {
+    content: "";
+    display: inline-block;
+    background-image: url(https://web.haresan.com/starscape-photography/img/star1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    right: -30%;
+    top: -30%;
+
+  }
+  &.appear::before {
+    animation: starmove .5s ease forwards;
+    // transform: translate(0, 0);
+  }
+}  
+.setup__star02 {
+  &::before {
+  content: '';
+  display: inline-block;
+  background-image: url(https://web.haresan.com/starscape-photography/img/star2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  left: -30%;
+  top: -30%;
+  // left: 0;
+  // top: 0;
+  }
+  &.appear::before {
+    animation: left_starmove .5s forwards;
+  }
+}
+.setup__star03 {
+  &::before {
+    content: "";
+    display: inline-block;
+    background-image: url(https://web.haresan.com/starscape-photography/img/star3.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    // transform: translate(300%, -100%);
+    right: -30%;
+    top: -20%;
+    z-index: 100;
+    
+  }
+  &.appear::before {
+    animation: starmove .5s ease forwards;
+    // transform: translate(0, 0);
+  }
+  // &.disappear::before {
+  //   animation: shooting-star .6s ease forwards;
+  // }
+}
+@keyframes starmove {
+  0% {
+    right: -30%;
+    top: -20%;
+  }
+  100% {
+    right: -3%;
+    top: 0;
+  }
+}
+@keyframes left_starmove {
+  0% {
+    left: -30%;
+    top: -20%;
+  }
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+
+// @keyframes shooting-star {
+//   0% {
+//     right: 0;
+//     top: 0;
+//   }
+//   100% {
+//     left: -30%;
+//     top: 20%;
+//   }
+// }
+  
+
+
+
+.setup__bg-image {
+  aspect-ratio: 3 / 2;
+  background-image: url(https://web.haresan.com/starscape-photography/img/slide-sp03.jpg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include g.mq() {
+    background-image: url(https://web.haresan.com/starscape-photography/img/slide04.jpg);
+  }
+  &--2 {
+    background-image: url(https://web.haresan.com/starscape-photography/img/slide-sp04.jpg);
+    background-position: bottom;
+    @include g.mq() {
+      background-image: url(https://web.haresan.com/starscape-photography/img/slide04.jpg);
+    }
+  }
+  &--3 {
+    background-image: url(https://web.haresan.com/starscape-photography/img/slide-sp02.jpg);
+    background-position: bottom right;
+    @include g.mq() {
+      background-image: url(https://web.haresan.com/starscape-photography/img/slide02.jpg);  
+    }
+  }
+  @include g.mq() {
+    width: 50%;
+  }
+}
+.setup__inner {
+  padding: 20px;
+  @include g.mq() {
+      padding: 15px;
+  }
+  
+}
+.setup__img {
+  flex-shrink: 0;
+  @include g.mq() {
+    width: 50%;
+    & img {
+      object-fit: cover;
+      object-position: center;
+      height: 100%;
+    }
+  }
+  
+  &--triming {
+    position: relative;
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 66.4609%;
+    }
+    & img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+  }
+}
+
+
+.setup__text {
+  margin-top: 16px;
+  & span {
+    text-transform: uppercase;
+  }
+  @include g.mq() {
+      margin-top: 24px;
+  }
+}

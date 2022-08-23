@@ -1,0 +1,16 @@
+@use "../global" as g;
+
+/*!
+layout > footer
+------------------------------
+*/
+
+.footer { 
+  background-color: rgba(255, 252, 209, 1);
+  & small {
+    display: block;
+    color: var(--color-base-dark);
+    text-align: center;
+    padding: 16px 0;
+  }
+}
